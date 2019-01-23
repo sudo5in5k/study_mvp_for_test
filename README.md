@@ -47,5 +47,18 @@ interface Contract {
 Presenterのコンストラクタで注入する
 ```
 
+kotlinではシングルトンクラスがobjectを宣言すると簡単に作ることができる
+
+AndroidSDKに依存するクラスは、UnitTestでは動かないためandroidTestパッケージにおいてInstrumentsする
+```java
+@RunWith(AndroidJUnit4::class)
+class ExampleInstrumentsTest {
+	@Test
+	fun hogehoge() {
+		assertTrue()
+	}
+}
+```
+
 
 
