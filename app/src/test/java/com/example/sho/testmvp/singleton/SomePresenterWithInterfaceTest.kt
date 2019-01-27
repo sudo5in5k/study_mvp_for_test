@@ -7,7 +7,7 @@ import com.nhaarman.mockitokotlin2.whenever
 import org.junit.Before
 import org.junit.Test
 
-class SomePresenterTest {
+class SomePresenterWithInterfaceTest {
 
     private val textView: TextView = mock { }
     private val preferenceManager = mock<PreferenceManagerInterface> { }

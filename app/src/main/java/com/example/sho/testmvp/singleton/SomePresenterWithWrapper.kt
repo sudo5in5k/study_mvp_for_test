@@ -1,15 +1,15 @@
-package com.example.sho.testmvp.statics
+package com.example.sho.testmvp.singleton
 
 import android.annotation.SuppressLint
 import android.widget.TextView
 
-object Greeting {
-
+class SomePresenterWithWrapper(private val textView: TextView,
+                               private val wrapper: PreferenceManagerWrapper) {
     @SuppressLint("SetTextI18n")
-    fun invoke(textView: TextView, hour: Int) {
+    fun  greeting() {
         textView.also {
-            when(hour) {
-                in 6..11 ->  it.text = "Good Morning"
+            when (wrapper.getHour()) {
+                in 6..11 -> it.text = "Good Morning"
                 in 12..17 -> it.text = "Hello"
                 in 18..24 -> it.text = "Good Evening"
                 else -> it.text = "Hi"

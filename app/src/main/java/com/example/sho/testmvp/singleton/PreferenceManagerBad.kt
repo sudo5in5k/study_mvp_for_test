@@ -5,7 +5,7 @@ import com.example.sho.testmvp.MainActivity
 
 object PreferenceManagerBad {
 
-    private val preferences = PreferenceManager.getDefaultSharedPreferences(
+    val preferences = PreferenceManager.getDefaultSharedPreferences(
             MainActivity()
     )
 
