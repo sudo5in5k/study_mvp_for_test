@@ -10,8 +10,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        instance = this
+
         val trans = supportFragmentManager.beginTransaction()
         trans.replace(R.id.food_fragment_container, FoodListFragment())
         trans.commit()
+    }
+
+    companion object {
+        var instance: MainActivity? = null
     }
 }

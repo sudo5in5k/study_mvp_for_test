@@ -6,7 +6,7 @@ import com.example.sho.testmvp.MainActivity
 object PreferenceManagerBad {
 
     val preferences = PreferenceManager.getDefaultSharedPreferences(
-            MainActivity()
+            MainActivity.instance
     )
 
     fun getHour(): Int = preferences.getInt("time", 0)
