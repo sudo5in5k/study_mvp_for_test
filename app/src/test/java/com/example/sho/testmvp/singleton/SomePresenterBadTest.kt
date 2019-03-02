@@ -12,7 +12,7 @@ class SomePresenterBadTest {
 
     private val textView: TextView = mock()
     private val preferenceManager: PreferenceManagerBad = mock()
-    lateinit var somePresenter: SomePresenter
+    private lateinit var somePresenter: SomePresenter
 
     private val testMock: SharedPreferences = mock()
 
